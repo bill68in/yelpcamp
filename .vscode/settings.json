@@ -1,0 +1,6 @@
+{
+    "editor.formatOnType": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false
+}
