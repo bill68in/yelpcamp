@@ -1,0 +1,607 @@
+WEBVTT
+
+00:00:00.370 --> 00:00:00.800
+There.
+
+00:00:00.810 --> 00:00:01.970
+Welcome back.
+
+00:00:01.970 --> 00:00:04.990
+So in this section we're going to focus on something brand new.
+
+00:00:05.070 --> 00:00:11.850
+It's going to be a little bit of a side trip for a moment away from Noad and express and the Yelp camp
+
+00:00:11.850 --> 00:00:14.420
+and all of the stuff we've been covering.
+
+00:00:14.460 --> 00:00:19.870
+We're not even we can write javascript h h him out or C Ss for the next few videos.
+
+00:00:20.070 --> 00:00:25.530
+We're going to focus on something called Get and most of you have probably heard of it or come across
+
+00:00:25.530 --> 00:00:27.180
+it in some way.
+
+00:00:27.180 --> 00:00:32.490
+It's very popular and important technology but it's it's very different than what we've done so far
+
+00:00:32.580 --> 00:00:32.830
+.
+
+00:00:33.000 --> 00:00:34.860
+It's not really a full language.
+
+00:00:34.860 --> 00:00:37.890
+It's not something that is actually that complex.
+
+00:00:37.920 --> 00:00:43.200
+It is a little tricky to really master and to get going at the beginning so I'm not trying to trivialize
+
+00:00:43.200 --> 00:00:48.470
+that at all but it is it's not like learning javascript or learning all of CCs.
+
+00:00:48.480 --> 00:00:51.200
+It's scope is much much smaller.
+
+00:00:51.660 --> 00:00:53.460
+So as I mentioned it is popular.
+
+00:00:53.460 --> 00:00:56.400
+I still haven't told you what it is really but it is popular.
+
+00:00:56.400 --> 00:01:03.180
+I just read today that 42 percent of developers use it and I don't know if that's in the US or across
+
+00:01:03.750 --> 00:01:04.660
+the entire world.
+
+00:01:04.680 --> 00:01:10.980
+But 42 percent of some population of developers uses it which is more than we can say about a lot of
+
+00:01:10.980 --> 00:01:12.280
+technologies.
+
+00:01:12.300 --> 00:01:16.230
+So what it is is a version control system.
+
+00:01:16.290 --> 00:01:24.960
+So if I go to the official get home page which is get dash as CMD dot com it's not going to be all that
+
+00:01:24.960 --> 00:01:30.300
+illuminating up front but what it tells us is that it is a free and open source distributed version
+
+00:01:30.300 --> 00:01:36.960
+control system designed to handle everything from small to very large projects with with speed and efficiency
+
+00:01:36.960 --> 00:01:38.420
+.
+
+00:01:38.460 --> 00:01:40.800
+So what is a version control system.
+
+00:01:41.010 --> 00:01:48.240
+Basically it's a way for us to work with different versions of our code so that we can save different
+
+00:01:48.240 --> 00:01:54.420
+features and make notes as we progress and have different versions that we can move forwards and backwards
+
+00:01:54.420 --> 00:01:55.650
+through time.
+
+00:01:55.950 --> 00:02:01.020
+And then we can also collaborate with other people and incorporate different versions of some code that
+
+00:02:01.020 --> 00:02:04.190
+I wrote with code that my coworker wrote.
+
+00:02:04.200 --> 00:02:05.880
+So it's really powerful.
+
+00:02:05.880 --> 00:02:07.400
+I said a lot of developers use it.
+
+00:02:07.500 --> 00:02:09.160
+It's definitely important.
+
+00:02:09.240 --> 00:02:15.750
+You might be wondering why I waited until this point to teach it and I've been I've seen a lot of questions
+
+00:02:15.750 --> 00:02:16.510
+about that.
+
+00:02:16.590 --> 00:02:22.650
+People who are starting the course wondering when when recovery get the reason that I didn't teach it
+
+00:02:22.650 --> 00:02:23.680
+up front.
+
+00:02:23.730 --> 00:02:24.570
+BUSH I actually have.
+
+00:02:24.570 --> 00:02:29.280
+Usually they do historically as I spend time teaching get at the beginning.
+
+00:02:29.320 --> 00:02:31.830
+And we also start with a command line early on.
+
+00:02:31.830 --> 00:02:33.210
+There's a few reasons really.
+
+00:02:33.210 --> 00:02:36.970
+One is that it's not that exciting.
+
+00:02:37.080 --> 00:02:42.960
+And I didn't want to lose people's interest right at the beginning especially in an online course where
+
+00:02:42.990 --> 00:02:49.030
+it's so easy to check out to not pay attention versus in an online or in an in-person class.
+
+00:02:49.080 --> 00:02:55.140
+I have you hostage for at least 45 minutes for a lecture where you have said you know you have to try
+
+00:02:55.140 --> 00:02:55.800
+it.
+
+00:02:55.800 --> 00:02:59.800
+So I didn't want to discourage people early on on top of that.
+
+00:02:59.880 --> 00:03:02.140
+It is something that requires the terminal.
+
+00:03:02.280 --> 00:03:04.240
+So you need to understand command line.
+
+00:03:04.350 --> 00:03:08.850
+And I didn't want to move command line to the beginning because then we have to talk about cloud 9 and
+
+00:03:08.850 --> 00:03:09.780
+installation.
+
+00:03:09.780 --> 00:03:12.380
+And I wanted just to keep it simple at the beginning.
+
+00:03:12.390 --> 00:03:14.280
+So that's the two of the reasons.
+
+00:03:14.280 --> 00:03:20.130
+The third one that's most important is that it's really hard to understand the utility of good to really
+
+00:03:20.130 --> 00:03:25.310
+see why it makes sense when you're working by yourself and when you're just starting out.
+
+00:03:25.320 --> 00:03:30.510
+So I mentioned that it helps you save different versions and helps you collaborate with people if you
+
+00:03:30.510 --> 00:03:33.360
+have a huge project it's really beneficial.
+
+00:03:33.360 --> 00:03:37.830
+But of course the beginning of this class we don't have any huge projects.
+
+00:03:38.010 --> 00:03:39.900
+We're not collaborating with people.
+
+00:03:39.990 --> 00:03:42.610
+And even at this point you're not necessarily collaborating.
+
+00:03:42.610 --> 00:03:45.170
+You're most likely learning on your own.
+
+00:03:45.360 --> 00:03:48.000
+So it's a little bit hard to really motivate.
+
+00:03:48.090 --> 00:03:50.880
+Why get is all that useful.
+
+00:03:50.910 --> 00:03:57.270
+I can I can convince you that it's useful but I don't think I would be able to get you to use it willingly
+
+00:03:57.410 --> 00:04:00.760
+and get you to want to use it until later in the course.
+
+00:04:00.780 --> 00:04:03.350
+So we're at that point now we're covering it.
+
+00:04:03.420 --> 00:04:08.280
+You've also probably heard of get hub if I go back here to our notes these are the big things I want
+
+00:04:08.280 --> 00:04:09.080
+to talk about.
+
+00:04:09.240 --> 00:04:09.960
+So what is it.
+
+00:04:09.960 --> 00:04:11.050
+What is it hub.
+
+00:04:11.250 --> 00:04:12.390
+They're very different.
+
+00:04:12.390 --> 00:04:17.720
+They are related maybe very different is too strong of a word but they're not the same thing.
+
+00:04:17.790 --> 00:04:22.420
+That's a really common misconception with beginners who just kind of lumped them in together.
+
+00:04:22.620 --> 00:04:24.550
+Get is that technology.
+
+00:04:24.640 --> 00:04:28.060
+It's totally separate get hub is a Web site.
+
+00:04:28.080 --> 00:04:33.970
+It's an application that works with get but they're they're not the same thing at all.
+
+00:04:34.110 --> 00:04:38.250
+So I'm actually going to talk more about what good hub is further down here.
+
+00:04:39.000 --> 00:04:44.550
+We can work with get and not even know about not care about get hub at all and lots of people do that
+
+00:04:44.630 --> 00:04:47.250
+though use get but they won't use get hub.
+
+00:04:47.340 --> 00:04:49.540
+It's not that common but it's possible.
+
+00:04:49.560 --> 00:04:55.540
+So we're going to focus on just get at the beginning so we talked about these two why you should care
+
+00:04:55.540 --> 00:04:57.010
+again is that it's really useful.
+
+00:04:57.010 --> 00:05:02.440
+So that's one thing you will potentially use this a lot especially for it if you end up working with
+
+00:05:02.440 --> 00:05:07.150
+people whether it's as a contractor or you get a job as a developer.
+
+00:05:07.150 --> 00:05:09.760
+It's something that lots and lots of teams use.
+
+00:05:09.760 --> 00:05:12.210
+As I mentioned 42 percent of developers from.
+
+00:05:12.250 --> 00:05:14.470
+So that's mainly why you should care.
+
+00:05:14.470 --> 00:05:17.550
+It's also one of those things is just good to have on your resume.
+
+00:05:17.890 --> 00:05:22.020
+And it's actually not limited only to writing code.
+
+00:05:22.330 --> 00:05:24.800
+Initially that was what it was kind of created for.
+
+00:05:24.940 --> 00:05:27.940
+But more recently there's been other applications.
+
+00:05:27.940 --> 00:05:34.420
+So one of those that I want to talk about is using it to help manage the process of writing a novel
+
+00:05:34.450 --> 00:05:36.510
+or a play or screenplay.
+
+00:05:36.940 --> 00:05:42.850
+So imagine that you are a writer and you have some huge story that's in your head that you're going
+
+00:05:42.850 --> 00:05:45.960
+to sit down and write in and I don't know.
+
+00:05:45.970 --> 00:05:51.850
+I've tried writing a screenplay before my process was very difficult.
+
+00:05:51.880 --> 00:05:58.660
+Lots of revisions lots of different drafts that I would save and my process is much the same as my process
+
+00:05:58.660 --> 00:06:08.980
+for writing essays in college was to write a version and save it as essay V-1 and then if I wanted to
+
+00:06:08.980 --> 00:06:14.560
+make some other crazy change or I decided I'm going to lead this entire paragraph and try something
+
+00:06:14.560 --> 00:06:15.480
+totally different.
+
+00:06:15.610 --> 00:06:21.730
+But I don't want to abandon what I had at the beginning then I would use Save As and make a copy and
+
+00:06:21.730 --> 00:06:23.780
+have essay V-2.
+
+00:06:24.130 --> 00:06:29.530
+And every time I wanted to have sort of a checkpoint where I could go back I could revert to my old
+
+00:06:29.530 --> 00:06:35.800
+draft I could read what I used to have I would create a new document and you as could give it a new
+
+00:06:35.800 --> 00:06:41.950
+title and usually increment the numbers and eventually I'd get something like this essay like Final
+
+00:06:42.070 --> 00:06:44.580
+real version.
+
+00:06:44.620 --> 00:06:50.380
+Pick this on something ridiculous because my name is my naming conventions are wasn't really a convention
+
+00:06:50.410 --> 00:06:52.540
+but my name and got out of hand.
+
+00:06:52.540 --> 00:06:59.470
+So that's a problem that get solved or one of the problems is that with get what I can do is have one
+
+00:06:59.470 --> 00:07:02.940
+essay or one screenplay that I'm working on and use.
+
+00:07:02.950 --> 00:07:08.250
+Get in and basically tell it to save my files to keep track of them.
+
+00:07:08.320 --> 00:07:12.020
+I still have to save the files in my text editor.
+
+00:07:12.040 --> 00:07:20.050
+But what I can do with get is say all right at this point save all these files and I've just added in
+
+00:07:20.200 --> 00:07:28.240
+the death of the main character and then I could write a little bit more and save again using get and
+
+00:07:28.240 --> 00:07:35.890
+say that I've now just added in the death of the secondary character and then I could change my mind
+
+00:07:35.890 --> 00:07:38.910
+and say maybe I should take the story in a different route.
+
+00:07:39.280 --> 00:07:42.940
+So then I could try something and save another version of it.
+
+00:07:42.940 --> 00:07:49.780
+Not really a draft but save another version where instead of killing off the two main characters they
+
+00:07:49.780 --> 00:07:52.290
+both live and they get married and they have kids.
+
+00:07:52.360 --> 00:07:57.460
+And what I can do later on if you know my editor gets the story and decides you know you really should
+
+00:07:57.460 --> 00:07:58.750
+of killed them off.
+
+00:07:58.810 --> 00:08:01.480
+I can easily just using a simple get command.
+
+00:08:01.630 --> 00:08:08.140
+It's a go back to the point where I saved it where I said that I killed off the main character or where
+
+00:08:08.140 --> 00:08:09.930
+I said you know X or Y.
+
+00:08:10.150 --> 00:08:16.570
+Basically you can leave little messages for yourself and it's not only that it's not limited to one
+
+00:08:16.570 --> 00:08:23.650
+file which is something that's very different from traditional systems of managing your version so on
+
+00:08:23.650 --> 00:08:25.540
+an essay it's one file that I'm working on.
+
+00:08:25.540 --> 00:08:28.900
+I save it and then I might save as.
+
+00:08:28.900 --> 00:08:30.700
+But it's always one file.
+
+00:08:30.700 --> 00:08:35.410
+What you can do with it get is if you have a huge project so going going to code.
+
+00:08:35.410 --> 00:08:42.460
+Now if we have a project with 10 javascript files a bunch of CSSA some images HCM lots of different
+
+00:08:42.460 --> 00:08:43.520
+technologies.
+
+00:08:43.540 --> 00:08:46.950
+Let's say it's an express app that's lots of folders.
+
+00:08:47.050 --> 00:08:51.820
+What I can do is target individual pieces and save them using get.
+
+00:08:52.000 --> 00:08:57.850
+So I can say OK I just created the directory and added in the views for dogs.
+
+00:08:58.090 --> 00:09:01.400
+And I can save that as a checkpoint that I can come back to later.
+
+00:09:01.810 --> 00:09:08.470
+And then I could do something later on raid and decide OK just remove the dogs from the views directory
+
+00:09:08.500 --> 00:09:12.800
+and instead move them into their own dog's directory inside with a view directory.
+
+00:09:12.820 --> 00:09:18.460
+And I can say that is a checkpoint and then I could do that for all different pieces so usually what
+
+00:09:18.460 --> 00:09:24.800
+you end up with is at the end of a project you'll have lots and lots of different little commits is
+
+00:09:24.820 --> 00:09:26.080
+what they're called.
+
+00:09:26.110 --> 00:09:31.980
+So I'm going to show you a quick example of that and I am going to get hub which again is not the same
+
+00:09:31.980 --> 00:09:32.630
+as get.
+
+00:09:32.650 --> 00:09:39.250
+Think of it as a viewer forget a way to share different versions of things to share code with people
+
+00:09:39.250 --> 00:09:39.880
+.
+
+00:09:39.880 --> 00:09:42.070
+It's not get itself though.
+
+00:09:42.250 --> 00:09:45.650
+So this is the express repository on get hub.
+
+00:09:45.820 --> 00:09:47.210
+And what I want to point out.
+
+00:09:47.320 --> 00:09:53.140
+So this is the code for express that we've been using when we run NPM install Express.
+
+00:09:53.140 --> 00:10:00.210
+This code is run well not necessarily run when we install but when we include Express and we execute
+
+00:10:00.210 --> 00:10:02.650
+it then a lot of this code is run.
+
+00:10:02.770 --> 00:10:05.420
+What I want to show though is right here.
+
+00:10:05.680 --> 00:10:08.070
+Five thousand one hundred ninety four commits.
+
+00:10:08.260 --> 00:10:13.030
+So in the next video we actually write our own commits and I'll show you with that what that looks like
+
+00:10:13.030 --> 00:10:14.180
+and really what it means.
+
+00:10:14.410 --> 00:10:19.660
+But take a look at all these messages and there's thousands of them.
+
+00:10:20.080 --> 00:10:23.130
+So let me just pick an arbitrary one here.
+
+00:10:24.000 --> 00:10:28.200
+Let's let's look at let's find Harry.
+
+00:10:28.220 --> 00:10:28.920
+This is fine.
+
+00:10:28.960 --> 00:10:31.280
+Update exampled dependencies.
+
+00:10:31.750 --> 00:10:37.740
+If I click on that what I see here are the files that were included in this commit.
+
+00:10:37.750 --> 00:10:43.930
+So the files that were basically targeted to be saved to make a version of a message that says update
+
+00:10:43.930 --> 00:10:45.490
+example dependencies.
+
+00:10:45.520 --> 00:10:48.090
+And I see what was changed.
+
+00:10:48.100 --> 00:10:49.710
+So we changed the versions.
+
+00:10:49.710 --> 00:10:54.530
+It looks like Harry whoever wrote this Doug Wilson changed the versions.
+
+00:10:55.120 --> 00:10:57.550
+So that's a simple example of a commit.
+
+00:10:57.550 --> 00:11:01.930
+Let's see if we can try to find something a little bit more complex.
+
+00:11:01.930 --> 00:11:02.190
+All right.
+
+00:11:02.200 --> 00:11:09.310
+Well here's one or two files so Express is probably 100 plus files across this entire repository.
+
+00:11:09.580 --> 00:11:14.760
+But in this case someone made a small commit with two changes across two files.
+
+00:11:15.100 --> 00:11:17.110
+So that's just a few examples.
+
+00:11:17.140 --> 00:11:18.710
+Feel free to take a look.
+
+00:11:19.000 --> 00:11:24.430
+Obviously you're not expected to understand the code or all the terminology but take a look and it's
+
+00:11:24.430 --> 00:11:26.860
+fun to go back to the very beginning.
+
+00:11:26.910 --> 00:11:31.570
+I actually don't know if there's a really easy way to get to do that just to hop back to the very beginning
+
+00:11:32.050 --> 00:11:38.440
+but you could try changing this to be page 50 and that takes you back to 2012.
+
+00:11:38.440 --> 00:11:40.570
+So that's a lot of show of express.
+
+00:11:40.660 --> 00:11:45.940
+Again we'll return to get her up shortly but we're going to start by talking about get in our terminal
+
+00:11:46.030 --> 00:11:51.830
+where we're just writing our own code and saving it at different places using get to make our own commits
+
+00:11:52.030 --> 00:11:56.220
+but we're not going to be sharing those with anyone until we talk about get up.
+
+00:11:56.230 --> 00:12:01.010
+So the last thing I want to mention is installing get and I have in parentheses.
+
+00:12:01.030 --> 00:12:02.010
+Not really.
+
+00:12:02.140 --> 00:12:07.270
+And that's because using Cloud 9 we don't have to install kid ourselves.
+
+00:12:07.270 --> 00:12:10.730
+It comes installed already when you make a new cloud nine instance.
+
+00:12:11.050 --> 00:12:15.730
+But if you're not using Cloud 9 if you're using a terminal your own terminal your own shell that you
+
+00:12:15.730 --> 00:12:22.200
+installed you will have to install it so you can find plenty of instructions online.
+
+00:12:22.210 --> 00:12:28.560
+Occasionally things go wrong you need some dependencies but it's one of the most installed tools on
+
+00:12:28.710 --> 00:12:33.440
+in all of web development so there's lots of tutorials resources stack overflow posts everywhere.
+
+00:12:33.640 --> 00:12:36.780
+But using cloud 9 we don't have to worry about that.
+
+00:12:36.790 --> 00:12:40.250
+So just to make sure that it works here's the test you can do.
+
+00:12:40.450 --> 00:12:44.930
+Get dash dash version.
+
+00:12:45.970 --> 00:12:50.300
+And as long as you see something here it doesn't have to be one point nine point one.
+
+00:12:50.320 --> 00:12:54.610
+If you're seeing this in the future and you have a different version there that's fine.
+
+00:12:54.700 --> 00:12:58.080
+All that matters is that you don't see commed not found.
+
+00:12:58.360 --> 00:13:03.160
+You don't see an error message and that's all we're going to do with get for now in the next lesson
+
+00:13:03.160 --> 00:13:03.360
+.
+
+00:13:03.430 --> 00:13:05.740
+We're going to talk about three new commands.
+
+00:13:05.740 --> 00:13:08.920
+Get a net get ADD and get commit.
+
+00:13:09.010 --> 00:13:10.240
+All right I'll see if Nelson
